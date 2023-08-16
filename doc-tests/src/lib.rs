@@ -20,8 +20,7 @@
 ///
 /// ```rust,should_panic
 /// // panics on division by zero
-/// let result = doctests::div(10, 0);
-/// assert_eq!(result, 0);
+/// doctests::div(10, 0);
 /// ```
 pub fn div(a: i32, b: i32) -> i32 {
     if b == 0 {
