@@ -1,11 +1,8 @@
 fn main() {
-    let mut x1 = 40;
+    let s1 = String::from("Hello");
+    let s2 = &s1;
+    let s3 = &s2;
+    let s4 = &s3;
 
-    let x2;
-
-    x1 = x1 * 3;
-
-    x2 = x1 - 2;
-
-    println!("My age is {} and my son age is {}", x1, x2);
+    let areSame = ***s4 == "Hello".to_string();
 }
