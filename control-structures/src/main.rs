@@ -1,4 +1,7 @@
 fn main() {
+    if_else_statement();
+    match_statement();
+    while_loop();
     for_loop();
 }
 
@@ -30,7 +33,7 @@ fn if_else_statement() {
 
 fn match_statement() {
     let marks = 65;
-    let mut grade = 'N';
+    let grade;
     match marks {
         90..=100 => {
             grade = 'A';
@@ -53,19 +56,19 @@ fn match_statement() {
     // let match
     let grade = match marks {
         90..=100 => {
-            grade = 'A';
+            'A';
         }
         80..=89 => {
-            grade = 'B';
+            'B';
         }
         70..=79 => {
-            grade = 'C';
+            'C';
         }
         60..=69 => {
-            grade = 'D';
+            'D';
         }
         _ => {
-            grade = 'F';
+            'F';
         }
     };
     println!("The grade is {:?}", grade);
