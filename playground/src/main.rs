@@ -1,8 +1,13 @@
 fn main() {
-    let s1 = String::from("Hello");
-    let s2 = &s1;
-    let s3 = &s2;
-    let s4 = &s3;
+    let i = 5;
+    let result: &i32;
+    {
+        let j = 10;
+        result = greater(&i, &j);
+        println!("The larger value is {}", result);
+    }
+}
 
-    let areSame = ***s4 == "Hello".to_string();
+fn greater<'a>(i: &'a i32, j: &'a i32) -> &'a i32 {
+    if i > j { i } else { j }
 }
