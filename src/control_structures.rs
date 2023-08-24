@@ -1,4 +1,4 @@
-fn main() {
+fn examples() {
     if_else_statement();
     match_statement();
     while_loop();

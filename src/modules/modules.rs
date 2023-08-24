@@ -9,7 +9,7 @@ struct Rectangle {
     width: i32,
 }
 
-fn main() {
+fn examples() {
     let rect1 = Rectangle {
         length: 5,
         width: 10,

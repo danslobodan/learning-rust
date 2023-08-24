@@ -1,6 +1,6 @@
 use std::vec;
 
-fn main() {
+fn examples() {
     function_pointers();
 }
 

@@ -1,4 +1,4 @@
-fn main() {
+fn examples() {
     let mut number_vec = vec![4, 5, 6, 7, 8];
 
     println!("First element of a vector {}", number_vec[0]);
