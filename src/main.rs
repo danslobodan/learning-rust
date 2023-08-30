@@ -1,5 +1,5 @@
-mod builder_pattern;
+mod threads;
 
 fn main() {
-    builder_pattern::example();
+    threads::threads_and_functions();
 }
