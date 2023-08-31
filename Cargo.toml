@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 regex = "1.4.2"
+ureq = "2.7.1"
