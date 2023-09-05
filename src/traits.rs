@@ -36,3 +36,28 @@ impl GeneralInfo for Student {
         &self.country
     }
 }
+
+trait Double {
+    fn double(&self) -> Self;
+}
+
+impl Double for i32 {
+    fn double(&self) -> Self {
+        self * 2
+    }
+}
+
+impl Double for i64 {
+    fn double(&self) -> Self {
+        self * 2
+    }
+}
+
+fn quadruple<T: Double>(x: T) -> T {
+    x.double().double()
+}
+
+pub fn examples() {
+    let x = 5;
+    println!("Quadruple of {} is {}", x, quadruple(x));
+}

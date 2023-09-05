@@ -12,7 +12,7 @@ mod maths {
 
         fn printing(num: &i32) {
             println!("The result is {}", num);
-            crate::file_1::some_fn();
+            crate::modules::file_1::some_fn();
         }
     }
 }

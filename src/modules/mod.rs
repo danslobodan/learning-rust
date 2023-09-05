@@ -1,6 +1,7 @@
-mod file_1;
-mod file_2;
-mod file_3;
+pub mod file_1;
+pub mod file_2;
+pub mod file_3;
+pub mod modules_ms_learn;
 
 use array_tool::vec::*;
 
