@@ -1,5 +1,5 @@
 fn main() {
-    practice::longest_non_stop_employee::example();
+    practice::sim_game::run();
 }
 
 mod practice;

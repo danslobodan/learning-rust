@@ -1,3 +1,15 @@
+pub fn examples() {
+    let speed = Kmh { value: 90 };
+    let distance = speed.distance(3);
+
+    println!("At {:?}, you will travel {:?} in 3 hours", speed, distance);
+
+    let speed = Mph { value: 90 };
+    let distance = speed.distance(3);
+
+    println!("At {:?}, you will travel {:?} in 3 hours", speed, distance);
+}
+
 struct Person {
     citizenship: String,
     name: String,
@@ -57,7 +69,44 @@ fn quadruple<T: Double>(x: T) -> T {
     x.double().double()
 }
 
-pub fn examples() {
-    let x = 5;
-    println!("Quadruple of {} is {}", x, quadruple(x));
+#[derive(Debug)]
+struct Kmh {
+    value: u32,
+}
+
+#[derive(Debug)]
+struct Km {
+    value: u32,
+}
+
+#[derive(Debug)]
+struct Mph {
+    value: u32,
+}
+
+#[derive(Debug)]
+struct Miles {
+    value: u32,
+}
+
+trait Distance {
+    type Distance;
+
+    fn distance(&self, hours: u32) -> Self::Distance;
+}
+
+impl Distance for Kmh {
+    type Distance = Km;
+
+    fn distance(&self, hours: u32) -> Self::Distance {
+        Km { value: self.value * hours }
+    }
+}
+
+impl Distance for Mph {
+    type Distance = Miles;
+
+    fn distance(&self, hours: u32) -> Self::Distance {
+        Miles { value: self.value * hours }
+    }
 }
