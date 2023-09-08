@@ -1,5 +1,5 @@
 fn main() {
-    practice::sim_game::run();
+    web::example();
 }
 
-mod practice;
+mod web;
