@@ -7,7 +7,7 @@ use std::time::Duration;
 
 pub fn example() {
     let listener = TcpListener::bind("127.0.0.1:8000").unwrap();
-    let mut active_requests = Arc::new(Mutex::new(0));
+    let active_requests = Arc::new(Mutex::new(0));
 
     let stream = listener.accept();
 

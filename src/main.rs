@@ -1,5 +1,5 @@
 fn main() {
-    web::example();
+    practice::blockchain::example();
 }
 
-mod web;
+mod practice;
