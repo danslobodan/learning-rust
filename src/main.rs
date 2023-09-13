@@ -1,5 +1,5 @@
 fn main() {
-    practice::blockchain::example();
+    regex::example();
 }
 
-mod practice;
+mod regex;
