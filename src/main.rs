@@ -1,5 +1,5 @@
 fn main() {
-    regex::example();
+    strings::example();
 }
 
-mod regex;
+mod strings;
