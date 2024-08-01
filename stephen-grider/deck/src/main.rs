@@ -3,8 +3,30 @@ struct Deck {
     cards: Vec<String>,
 }
 
-fn main() {
-    let deck = Deck { cards: vec![] };
+impl Deck {
+    fn new() -> Self {
+        let suits = ["Hearts", "Clubs", "Diamonds"];
+        let values = ["Ace", "Two", "Three"];
 
-    println!("Heres your deck: {:?}", deck);
+        let mut cards = vec![];
+
+        for suit in suits {
+            for value in values {
+                let card = format!("{} of {}", value, suit);
+                cards.push(card);
+            }
+        }
+
+        Deck { cards }
+    }
+
+    fn shuffle(&self) {
+        
+    }
+}
+
+fn main() {
+    let deck = Deck::new();
+    deck.shuffle();
+    println!("Heres your deck: {:#?}", deck);
 }
